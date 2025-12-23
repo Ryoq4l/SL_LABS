@@ -1,0 +1,1 @@
+2025-12-23T01:02:18.558068+03:00 ekoleda-VirtualBox useradd[9188]: failed adding user 'vboxadd', exit code: 9
