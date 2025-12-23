@@ -1,0 +1,80 @@
+   81  touch projects/web/static/index.html projects/web/static/styles.css
+   82  echo "<html><body>Hello Linux Lab</body></html>" > projects/web/static/index.html
+   83  cp projects/web/static/styles.css temp/old_styles.css
+   84  mv projects/scripts/config.yaml temp/
+   85  cp projects/scripts/*.sh temp/ 2>/dev/null || echo "No .sh files"
+   86  find ~/linux_lab -type f -exec du -h {} \; | sort -h
+   87  ln ~/linux_lab/projects/scripts/main.py ~/hard_link.txt
+   88  cat ~/hard_link.txt
+   89  echo "Modified via hard link" >> ~/hard_link.txt
+   90  cat ~/linux_lab/projects/scripts/main.py
+   91  ln -s ~/linux_lab/projects/web/static ~/linux_lab/temp/web_link
+   92  cd ~/linux_lab/temp/web_link
+   93  cd ~/linux_lab
+   94  tree ~/linux_lab/temp/web_link
+   95  tar -cf ~/linux_lab/backups/projects_backup.tar ~/linux_lab/projects
+   96  tar -czf ~/linux_lab/backups/web_backup.tar.gz ~/linux_lab/projects/web
+   97  zip -j ~/linux_lab/backups/important_files.zip ~/linux_lab/projects/scripts/main.py ~/linux_lab/projects/scripts/utils.sh
+   98  mkdir -p ~/linux_lab/temp/restored_web
+   99  tar -xzf ~/linux_lab/backups/web_backup.tar.gz -C ~/linux_lab/temp/restored_web --strip-components=3
+  100  tar -xzf ~/linux_lab/backups/web_backup.tar.gz -C ~/linux_lab/temp/restored_web --str
+  101  unzip -l ~/linux_lab/backups/important_files.zip
+  102  rm -rf ~/linux_lab/temp/*
+  103  rm -rf ~/linux_lab/backups/*
+  104  rm -f ~/linux_lab/temp/web_link 2>/dev/null
+  105  {\necho "=== System Report ==="\nwhoami\nlogname\npwd\nid\necho "=== Files in projects/scripts/ ==="\nls -l ~/linux_lab/projects/scripts/\n} > ~/linux_lab/report.txt
+  106  date >> ~/linux_lab/report.txt
+  107  cp ~/linux_lab/report.txt ~/
+  108  zip -r -P 1111 ~/linux_lab_final.zip ~/linux_lab
+  109  du -h ~/linux_lab_final.zip
+  110  rm -rf ~/linux_lab
+  111  unzip -P 1111 ~/linux_lab_final.zip -d ~/
+  112  cat ~/linux_lab/report.txt
+  113  find ~/ -name "report.txt" 2>/dev/null
+  114  cp ~/home/e-koleda/linux_lab/report.txt ~/linux_lab/report.txt
+  115  cp ~/home/e-koleda/linux_lab/report.txt ~/linux_lab/
+  116  cat ~/linux_lab/report.txt\ntree ~/linux_lab
+  117  tree ~/linux_lab
+  118  mkdir ~/linux_lab
+  119  cp ~/home/e-koleda/linux_lab/report.txt ~/linux_lab/
+  120  cat ~/linux_lab/report.txt
+  121  tree ~/linux_lab
+  122  ls -la ~/commands.txt ~/linux_lab_final.zip ~/report.txt
+  123  mkdir ~/linux_lab
+  124  cd ~/linux_lab
+  125  mkdir -p projects/{scripts,web/{static,templates},docs} temp backups
+  126  tree
+  127  touch projects/scripts/main.py projects/scripts/config.yaml projects/scripts/utils.sh
+  128  touch projects/web/static/index.html projects/web/static/styles.css
+  129  echo "<html><body>Hello Linux Lab</body></html>" > projects/web/static/index.html
+  130  cp projects/web/static/styles.css temp/old_styles.css
+  131  mv projects/scripts/config.yaml temp/
+  132  cp projects/scripts/*.sh temp/ 2>/dev/null || echo "Нет .sh файлов"
+  133  find ~/linux_lab -type f -exec du -h {} \; | sort -h
+  134  ln ~/linux_lab/projects/scripts/main.py ~/hard_link.txt
+  135  cat ~/hard_link.txt
+  136  echo "Modified via hard link" >> ~/hard_link.txt
+  137  cat ~/linux_lab/projects/scripts/main.py
+  138  ln -s ~/linux_lab/projects/web/static ~/linux_lab/temp/web_link
+  139  cd ~/linux_lab/temp/web_link
+  140  cd ~/linux_lab
+  141  tree ~/linux_lab/temp/web_link
+  142  tar -cf ~/linux_lab/backups/projects_backup.tar ~/linux_lab/projects
+  143  tar -czf ~/linux_lab/backups/web_backup.tar.gz ~/linux_lab/projects/web
+  144  zip -j ~/linux_lab/backups/important_files.zip ~/linux_lab/projects/scripts/main.py ~/linux_lab/projects/scripts/utils.sh
+  145  mkdir -p ~/linux_lab/temp/restored_web
+  146  tar -xzf ~/linux_lab/backups/web_backup.tar.gz -C ~/linux_lab/temp/restored_web --strip-components=3
+  147  unzip -l ~/linux_lab/backups/important_files.zip
+  148  rm -rf ~/linux_lab/temp/*
+  149  rm -rf ~/linux_lab/backups/*
+  150  rm -f ~/linux_lab/temp/web_link 2>/dev/null
+  151  {\necho "=== System Report ==="\nwhoami\nwhoami  # вместо logname\npwd\nid\necho "=== Files in projects/scripts/ ==="\nls -l ~/linux_lab/projects/scripts/\n} > ~/linux_lab/report.txt
+  152  date >> ~/linux_lab/report.txt
+  153  cp ~/linux_lab/report.txt ~/
+  154  cd ~
+  155  zip -r -P 1111 linux_lab_final.zip linux_lab
+  156  du -h ~/linux_lab_final.zip
+  157  rm -rf ~/linux_lab
+  158  unzip -P 1111 ~/linux_lab_final.zip -d ~/
+  159  cat ~/linux_lab/report.txt
+  160  tree ~/linux_lab

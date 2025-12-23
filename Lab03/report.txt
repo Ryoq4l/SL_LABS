@@ -1,0 +1,10 @@
+=== System Report ===
+e-koleda
+e-koleda
+/home/e-koleda/linux_lab
+uid=1000(e-koleda) gid=1000(e-koleda) groups=1000(e-koleda),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),105(lpadmin),125(sambashare),986(vboxsf)
+=== Files in projects/scripts/ ===
+total 0
+-rw-rw-r-- 1 e-koleda e-koleda 0 Dec 23 04:10 main.py
+-rw-rw-r-- 1 e-koleda e-koleda 0 Dec 23 04:10 utils.sh
+Tue Dec 23 04:13:45 AM +03 2025
